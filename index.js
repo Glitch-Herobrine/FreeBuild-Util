@@ -5,28 +5,25 @@ import axios from "axios";
 
 let Griefers;
 let Ragebaiters;
-const ModuleVersion = "1.0.1";
+const ModuleVersion = "1.0.2";
 
 const grayLines = "&7--------------------";
 
-    if (Griefers === undefined){
-        axios.get("https://raw.githubusercontent.com/Glitch-Herobrine/Hypixel-Griefers-List/refs/heads/main/allgriefers.txt")
+    axios.get("https://raw.githubusercontent.com/Glitch-Herobrine/Hypixel-Griefers-List/refs/heads/main/allgriefers.txt")
         .then(response => {
             Griefers = response.data.split(" ");
         })
         .catch(error => {
             ChatLib.chat(`&cAn error occured: ${error}`)
         });
-    };
-    if (Ragebaiters === undefined){
-        axios.get("https://raw.githubusercontent.com/Glitch-Herobrine/Hypixel-Griefers-List/refs/heads/main/ragebaiters.txt")
+
+    axios.get("https://raw.githubusercontent.com/Glitch-Herobrine/Hypixel-Griefers-List/refs/heads/main/ragebaiters.txt")
         .then(response => {
             Ragebaiters = response.data.split(" ");
         })
         .catch(error => {
             ChatLib.chat(`&cAn error occured: ${error}`)
         });
-    };
 
 register("command", (args) => {
     ChatLib.chat(`&7--------------------\n&aFreeBuild Util\n&7Version: ${ModuleVersion} \n&7--------------------`);
