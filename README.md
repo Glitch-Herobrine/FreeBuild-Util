@@ -1,4 +1,4 @@
-<b>Warning: This module is currently in beta, meaning there could be some bugs.</b>
+<b>Warning: This module is discontinued, therefore will not receive any updates.
 # FreeBuild Util
 A ChatTriggers module for Hypixel FreeBuilds.
 ## Documentation
